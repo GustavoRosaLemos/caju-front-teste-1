@@ -1,0 +1,1 @@
+export const FULL_NAME_REGEX = /^[A-Za-zÀ-ÖØ-öø-ÿ]{2,}(?: [A-Za-zÀ-ÖØ-öø-ÿ]{2,})+$/;

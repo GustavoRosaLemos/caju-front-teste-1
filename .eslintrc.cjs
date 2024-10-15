@@ -13,12 +13,19 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        alias: {
+          "~": "./src",
+        },
       },
     },
   },
+  ignorePatterns: ['/*', '!/src'],
   rules: {
     "@typescript-eslint/no-explicit-any": "off",
     "react/react-in-jsx-scope": "off",
@@ -27,6 +34,8 @@ module.exports = {
     "react/display-name": "off",
     "@typescript-eslint/ban-types": "off",
     "import/named": "off",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/indent": ["error", 2],
+    "semi": ["error", "always"],
   },
 };
