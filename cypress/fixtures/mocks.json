@@ -1,0 +1,11 @@
+{
+    "registration": {
+        "id": "d77a",
+        "cpf": "83655551070",
+        "formattedCpf": "836.555.510-70",
+        "employeeName": "Teste Cypress",
+        "status": "REVIEW",
+        "admissionDate": "2024-10-15",
+        "email": "teste@cypress.com"
+    }
+}

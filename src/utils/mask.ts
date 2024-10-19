@@ -1,5 +1,3 @@
-
-
 export const digitMask = (value: string, mask: string): string => {
   const clearValue = value.replace(/\D/g, '');
   let maskedValue = '';

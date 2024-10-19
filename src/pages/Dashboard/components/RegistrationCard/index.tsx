@@ -64,30 +64,30 @@ const RegistrationCard = (props: Props) => {
   };
 
   return (
-    <S.Card>
+    <S.Card data-testid="RegistrationCard_Card">
       <S.IconAndText>
         <HiOutlineUser />
-        <h3>{props.data.employeeName}</h3>
+        <h3 data-testid="RegistrationCard_h3_employeeName">{props.data.employeeName}</h3>
       </S.IconAndText>
       <S.IconAndText>
         <HiOutlineMail />
-        <p>{props.data.email}</p>
+        <p data-testid="RegistrationCard_p_email">{props.data.email}</p>
       </S.IconAndText>
       <S.IconAndText>
         <HiOutlineCalendar />
-        <span>{props.data.admissionDate}</span>
+        <span data-testid="RegistrationCard_span_admissionDate">{props.data.admissionDate}</span>
       </S.IconAndText>
       <S.Actions>
         <If condition={props.data.status === RegistrationStatus.REVIEW}>
           <Then>
-            <ButtonSmall bgcolor="rgb(255, 145, 154)" onClick={handleReprove}>Reprovar</ButtonSmall>
-            <ButtonSmall bgcolor="rgb(155, 229, 155)" onClick={handleApprove}>Aprovar</ButtonSmall>
+            <ButtonSmall bgcolor="rgb(255, 145, 154)" onClick={handleReprove} data-testid="RegistrationCard_ButtonSmall_reprove">Reprovar</ButtonSmall>
+            <ButtonSmall bgcolor="rgb(155, 229, 155)" onClick={handleApprove} data-testid="RegistrationCard_ButtonSmall_approve">Aprovar</ButtonSmall>
           </Then>
           <Else>
-            <ButtonSmall bgcolor="#ff8858" onClick={handleReview}>Revisar novamente</ButtonSmall>
+            <ButtonSmall bgcolor="#ff8858" onClick={handleReview} data-testid="RegistrationCard_ButtonSmall_review">Revisar novamente</ButtonSmall>
           </Else>
         </If>
-        <HiOutlineTrash onClick={handleDelete} />
+        <HiOutlineTrash data-testid="RegistrationCard_HiOutlineTrash_delete" onClick={handleDelete} />
       </S.Actions>
     </S.Card>
   );

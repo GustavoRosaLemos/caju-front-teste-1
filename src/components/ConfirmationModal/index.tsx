@@ -1,4 +1,4 @@
-import { If } from "react-if";
+import { If, Then } from "react-if";
 import { Card, Container, Title } from "./styles";
 import Button from "../Buttons";
 import { useCloseModal, useModal } from "~/hooks/modal";
@@ -36,17 +36,19 @@ const ConfirmationModal = () => {
 
   return (
     <If condition={!!modal}>
-      <Container>
-        <Card isClosing={isClosing}>
-          <Title>
-            {modal?.title}
-          </Title>
-          <Group justify="space-around">
-            <Button variant="outlined" color="rgb(255, 145, 154)" onClick={handleClose}>{modal?.cancelLabel ?? 'Cancelar'}</Button>
-            <Button variant="outlined" color="rgb(155, 229, 155)" onClick={handleConfirm}>{modal?.confirmLabel ?? 'Confirmar'}</Button>
-          </Group>
-        </Card>
-      </Container>
+      <Then>
+        <Container>
+          <Card isClosing={isClosing} data-testid="ConfirmationModal_Card">
+            <Title>
+              {modal?.title}
+            </Title>
+            <Group justify="space-around">
+              <Button data-testid="ConfirmationModal_Button_cancel" variant="outlined" color="rgb(255, 145, 154)" onClick={handleClose}>{modal?.cancelLabel ?? 'Cancelar'}</Button>
+              <Button data-testid="ConfirmationModal_Button_confirm" variant="outlined" color="rgb(155, 229, 155)" onClick={handleConfirm}>{modal?.confirmLabel ?? 'Confirmar'}</Button>
+            </Group>
+          </Card>
+        </Container>
+      </Then>
     </If>
   );};
 

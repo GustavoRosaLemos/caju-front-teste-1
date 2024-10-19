@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Button = styled.button<{
-  variant: "default" | "outlined"
-  color: string
+  variant?: "default" | "outlined"
+  color?: string
 }>`
   outline: none;
   display: flex;

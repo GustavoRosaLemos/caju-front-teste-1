@@ -1,0 +1,8 @@
+{
+  "registrationsUrl": "http://localhost:3000/registrations",
+  "card": {
+    "pendingTitle": "Pronto para revisar",
+    "approvedTitle": "Aprovado",
+    "reprovedTitle": "Reprovado"
+  }
+}

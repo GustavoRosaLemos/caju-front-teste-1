@@ -68,11 +68,11 @@ const NewUserPage = () => {
         <IconButton onClick={() => goToHome()} aria-label="back">
           <HiOutlineArrowLeft size={24} />
         </IconButton>
-        <TextField placeholder="Nome" label="Nome" error={errors.employeeName} name="employeeName" value={values.employeeName} onChange={handleChange} />
-        <TextField placeholder="Email" label="Email" type="email" error={errors.email} name="email" value={values.email} onChange={handleChange} />
-        <TextField placeholder="CPF" label="CPF" error={errors.cpf} name="cpf" value={values.cpf} onChange={handleChanceCpf} />
-        <TextField label="Data de admissão" type="date" error={errors.admissionDate} name="admissionDate" value={values.admissionDate} onChange={handleChange} />
-        <Button onClick={submitForm}>Cadastrar</Button>
+        <TextField data-testid="NewUser_TextField_name" placeholder="Nome" label="Nome" error={errors.employeeName} name="employeeName" value={values.employeeName} onChange={handleChange} />
+        <TextField data-testid="NewUser_TextField_email" placeholder="Email" label="Email" type="email" error={errors.email} name="email" value={values.email} onChange={handleChange} />
+        <TextField data-testid="NewUser_TextField_cpf" placeholder="CPF" label="CPF" error={errors.cpf} name="cpf" value={values.cpf} onChange={handleChanceCpf} />
+        <TextField data-testid="NewUser_TextField_admissionDate" label="Data de admissão" type="date" error={errors.admissionDate} name="admissionDate" value={values.admissionDate} onChange={handleChange} />
+        <Button data-testid="NewUser_Button_submit" onClick={submitForm}>Cadastrar</Button>
       </S.Card>
     </S.Container>
   );

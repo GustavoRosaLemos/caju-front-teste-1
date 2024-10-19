@@ -15,30 +15,6 @@
       "status": "",
       "admissionDate": "20241015",
       "email": ""
-    },
-    {
-      "id": "b5e3",
-      "cpf": "781.101.190-50",
-      "employeeName": "Carlos Joe",
-      "status": "REVIEW",
-      "admissionDate": "2024-10-15",
-      "email": "jose@mail.com"
-    },
-    {
-      "id": "e7d0",
-      "cpf": "87129877006",
-      "employeeName": "Ricardo Antonio",
-      "status": "APPROVED",
-      "admissionDate": "2024-10-15",
-      "email": "ricardo@mail.com"
-    },
-    {
-      "id": "d77a",
-      "cpf": "83655551070",
-      "employeeName": "Rick Martins",
-      "status": "REVIEW",
-      "admissionDate": "2024-10-15",
-      "email": "rick@mail.com"
     }
   ]
 }

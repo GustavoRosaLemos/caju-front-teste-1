@@ -59,12 +59,12 @@ export const SearchBar = () => {
   
   return (
     <S.Container>
-      <TextField error={errors.cpf} placeholder="Digite um CPF válido" name="cpf" onKeyDown={handleKeyDown} onChange={handleChanceCpf} onBlur={handleBlur} value={values.cpf} />
+      <TextField data-testid="Searchbar_texfield_cpf" error={errors.cpf} placeholder="Digite um CPF válido" name="cpf" onKeyDown={handleKeyDown} onChange={handleChanceCpf} onBlur={handleBlur} value={values.cpf} />
       <S.Actions>
-        <IconButton aria-label="refetch">
+        <IconButton data-testid="Searchbar_button_refresh" aria-label="refetch">
           <HiRefresh onClick={handleRefresh} />
         </IconButton>
-        <Button onClick={() => goToNewAdmissionPage()}>Nova Admissão</Button>
+        <Button data-testid="Searchbar_button_newAdmission" onClick={() => goToNewAdmissionPage()}>Nova Admissão</Button>
       </S.Actions>
     </S.Container>
   );

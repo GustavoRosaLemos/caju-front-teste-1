@@ -13,12 +13,13 @@ const Letter = styled.span<LetterProps>`
     rgba(255, 117, 0, 1) 8%,
     rgba(232, 5, 55, 1) 53%
   );
-  -webkit-background-clip: text; /* Para compatibilidade com WebKit */
-  background-clip: text; /* Padrão, para outros navegadores */
-  -webkit-text-fill-color: transparent; /* Para compatibilidade com WebKit */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Loading = styled.div`
+  z-index: 2;
   font-size: 120px;
   font-weight: bold;
   display: inline-flex;
