@@ -124,6 +124,12 @@ Execute a aplicação
 yarn dev
 ```
 
+Executar cypress
+```shell
+yarn cypress open
+```
+*necessário estar com a aplicação e servidor json rodando.
+
 Se tudo ocorreu bem os seguintes serviços estarão disponiveis em:
 <br/>
 
